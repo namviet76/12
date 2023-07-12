@@ -1,15 +1,20 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const db = require('./config/db')
 
 app.use(express.urlencoded())
 app.use(express.json())
+
+db.connect()
 
 app.get('/', (req, res)=> res.send('chao moi nguoi'))
 
 app.listen(port, () => {
     console.log(`app listen an port ${port}`)
 } )
+
+
 
 /* const http = require(‘http’);
 const hostname = ‘meintest.onrender.com’;
