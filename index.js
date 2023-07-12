@@ -8,7 +8,7 @@ app.use(express.json())
 
 db.connect()
 
-app.get('/', (req, res)=> res.send('chao moi nguoi dang ket noi web server nhung khong duoc'))
+app.get('/', (req, res)=> res.send('chao moi nguoi dang ket noi web server duoc roi'))
 
 app.listen(port, () => {
     console.log(`app listen an port ${port}`)
